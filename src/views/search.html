@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <% if (results.length > 0) { %>
+    <ul>
+      <% results.forEach(result => { %>
+        <li>
+          <strong><%= result.name %></strong><br>
+          <%= result.content %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No results found.</p>
+  <% } %>
+</body>
+</html>
